@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="debf30ce0a7560396b6235edef77e447006454c2">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\com.android.support-recyclerview-v7-23.3.0_017761b012c9b35cd76a9971951f30d13d0f5754.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="f0001e71cea6ae432a00021c6f727f5ef0f3d27e">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\com.android.support-design-23.3.0_2315a347d2877e37fbc514f44e445484cdfe7476.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="982195962217c506d51a3113f0e2819efe0c0526">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\instant-run-bootstrap_271ce5929cd40fa0420794534a9120c253502b75.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="8a034dd16c0dfd75fe86c52c2cd581592acc684a">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.3.0_8c3deb83643a816320f02308a7e418a427d0d735.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="b4a8d078c723fe85f95e30f0205445dc5e33c7ea">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\instant-run_d3b8bce93a8b44401f9346bcd5a1778568748567.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="23be6993826b8fd88bbc8d14928bb3b8960d3d4e">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.3.0_8e01c56a38e3b9348bfb6fffbe42e4d97bd293ef.jar" />
+    </item>
+    <item
+        jar="C:\Users\AhmAd\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\23.3.0\support-annotations-23.3.0.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="db7791d75a07fef9844d06236c1c59ba7bf6997c">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\support-annotations-23.3.0_49554c7241b6fe9e582cb3a1b59cd03c23441c5b.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.3.0_4f9ccc57726abe1de1915babb259772d86d098e9.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.3.0_6dc83037a92801307fc1a790d87819d01b252f4b.jar" />
+    </item>
+    <item
+        jar="E:\Projects\XGram\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\libs\internal_impl-23.3.0.jar"
+        jumboMode="true"
+        revision="25.0.2"
+        sha1="4da5a4d697d32497c6f85567a5112e62fdfd0676">
+        <dex dex="E:\Projects\XGram\app\build\intermediates\pre-dexed\debug\internal_impl-23.3.0_6746c75ee79e52043cf7176ec761513dad5158dc.jar" />
+    </item>
+
+</items>
