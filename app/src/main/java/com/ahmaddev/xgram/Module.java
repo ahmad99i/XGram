@@ -23,7 +23,7 @@ import de.robv.android.xposed.callbacks.XC_LayoutInflated;
 import de.robv.android.xposed.callbacks.XC_LoadPackage.LoadPackageParam;
 import java.util.StringTokenizer;
 
-public class Module implements IXposedHookZygoteInit, IXposedHookInitPackageResources, IXposedHookLoadPackage {
+public class Module implements IXposedHookZygoteInit, IXposedHookInitPackageResources {
     public static String INSTGRAM_PACKAGE_NAME = "com.instagram.android";
     public static String MODULE_PACKAGE_NAME = BuildConfig.APPLICATION_ID;
     static String MODULE_PATH = null;
@@ -33,16 +33,6 @@ public class Module implements IXposedHookZygoteInit, IXposedHookInitPackageReso
 
     public void initZygote(StartupParam startupParam) throws Throwable {
         MODULE_PATH = startupParam.modulePath;
-    }
-
-    public void handleLoadPackage(LoadPackageParam lpparam) throws Throwable {
-        if (lpparam.packageName.equals(INSTGRAM_PACKAGE_NAME)) {
-            XposedHelpers.findAndHookMethod("com.instagram.ui.mediaactions.LikeActionView", lpparam.classLoader, "a", new Object[]{Float.TYPE, Boolean.TYPE, Boolean.TYPE, new XC_MethodHook() {
-                protected void beforeHookedMethod(MethodHookParam param) throws Throwable {
-                    //param.thisObject.setRotation((float) Integer.valueOf(reXSP("img_rot", "1")).intValue());
-                }
-            }});
-        }
     }
 
     public void handleInitPackageResources(InitPackageResourcesParam resparam) throws Throwable {
@@ -58,10 +48,10 @@ public class Module implements IXposedHookZygoteInit, IXposedHookInitPackageReso
     //Hide heart or Just show the image?
     public void InitHeart (InitPackageResourcesParam resparam) {
 
-        final Drawable heartDrawable = Drawable.createFromPath(Environment.getExternalStorageDirectory().getPath() + "/Android/data/com.ahmaddev.xgram/cache/image/" + "img_cache.png");
+        final Drawable heartDrawable = Drawable.createFromPath(Environment.getExternalStorageDirectory().getPath() + "/Android/data/com.ahmaddev.xgram/image/heart.png");
 
-        Boolean HIDE_HEART = XSPBoolean("hide_heart", false);
-        final Integer HEART_ROTATION = XSPInt("img_rot", 0);
+        Boolean HIDE_HEART = XSPBoolean("heart_hide", false);
+        final Integer HEART_ROTATION = XSPInt("heart_rot", 0);
 
         if (HIDE_HEART) {
             resparam.res.setReplacement(INSTGRAM_PACKAGE_NAME, "drawable", "feed_like_big", new DrawableLoader() {
@@ -90,7 +80,7 @@ public class Module implements IXposedHookZygoteInit, IXposedHookInitPackageReso
     //Disable Commenting?
     public void InitDisableComment (InitPackageResourcesParam resparam) {
 
-        Boolean DISABLE_COMMENT = XSPBoolean("hide_comment", false);
+        Boolean DISABLE_COMMENT = XSPBoolean("disable_comment", false);
 
         if (DISABLE_COMMENT) {
             resparam.res.hookLayout(INSTGRAM_PACKAGE_NAME, "layout", "comment_textview_layout", new XC_LayoutInflated() {
@@ -130,7 +120,7 @@ public class Module implements IXposedHookZygoteInit, IXposedHookInitPackageReso
     //Disable Directing
     public void InitDisableDirect (InitPackageResourcesParam resparam) {
 
-        Boolean DISABLE_DIRECT = XSPBoolean("hide_direct", false);
+        Boolean DISABLE_DIRECT = XSPBoolean("disable_direct", false);
 
         if (DISABLE_DIRECT) {
             resparam.res.hookLayout(INSTGRAM_PACKAGE_NAME, "layout", "direct_row_message_composer", new XC_LayoutInflated() {

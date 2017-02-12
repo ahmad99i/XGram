@@ -26,7 +26,7 @@
     <string name="notification_image_saved">Image saved</string>
     <string name="notification_image_saved_click_to_preview">Image saved. Click to preview.</string>
 
-    <string name="menu_download">Download</string>
+    <string name="menu_download">Done</string>
 
     <string name="button_pick_amp_crop"><![CDATA[Pick & Crop]]></string>
     <string name="button_crop_random_image">Crop random image</string>

@@ -43,10 +43,10 @@ public class MiscFragment extends Fragment {
         mSDisableComment.setOnCheckedChangeListener(new SwitchCompat.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    Helpers.SpIntertBoolean(getActivity(), "hide_comment", true);
+                    Helpers.SpIntertBoolean(getActivity(), "disable_comment", true);
                 }
                 if (!isChecked) {
-                    Helpers.SpIntertBoolean(getActivity(), "hide_comment", false);
+                    Helpers.SpIntertBoolean(getActivity(), "disable_comment", false);
                 }
             }
         });
@@ -54,10 +54,10 @@ public class MiscFragment extends Fragment {
         mSDisableDirect.setOnCheckedChangeListener(new SwitchCompat.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    Helpers.SpIntertBoolean(getActivity(), "hide_direct", true);
+                    Helpers.SpIntertBoolean(getActivity(), "disable_direct", true);
                 }
                 if (!isChecked) {
-                    Helpers.SpIntertBoolean(getActivity(), "hide_direct", false);
+                    Helpers.SpIntertBoolean(getActivity(), "disable_direct", false);
                 }
             }
         });
@@ -97,12 +97,12 @@ public class MiscFragment extends Fragment {
     }
 
     public void returnValues () {
-        if (sp.contains("hide_direct")) {
-            mSDisableDirect.setChecked(sp.getBoolean("hide_direct", false));
+        if (sp.contains("disable_direct")) {
+            mSDisableDirect.setChecked(sp.getBoolean("disable_direct", false));
         }
 
-        if (sp.contains("hide_comment")) {
-            mSDisableComment.setChecked(sp.getBoolean("hide_comment", false));
+        if (sp.contains("disable_comment")) {
+            mSDisableComment.setChecked(sp.getBoolean("disable_comment", false));
         }
 
 

@@ -86,10 +86,10 @@ public class HeartFragment extends Fragment {
         mSHide.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    Helpers.SpIntertBoolean(getActivity(), "hide_heart", true);
+                    Helpers.SpIntertBoolean(getActivity(), "heart_hide", true);
                 }
                 if (!isChecked) {
-                    Helpers.SpIntertBoolean(getActivity(), "hide_heart", false);
+                    Helpers.SpIntertBoolean(getActivity(), "heart_hide", false);
                 }
             }
         });
@@ -97,7 +97,7 @@ public class HeartFragment extends Fragment {
         mSbRotation.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                Helpers.SpIntertInt(getActivity(), "img_rot", progress);
+                Helpers.SpIntertInt(getActivity(), "heart_rot", progress);
                 mImageView.setRotation(progress);
             }
 
@@ -343,22 +343,16 @@ public class HeartFragment extends Fragment {
 
 
 
-
-
-
-
-
-
     public void refImage() {
-        mImageView.setImageBitmap(BitmapFactory.decodeFile(new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/cache/image/" + "img_cache.png").getAbsolutePath()));
+        mImageView.setImageBitmap(BitmapFactory.decodeFile(new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/image/heart.png").getAbsolutePath()));
 
     }
 
     public void returnValues() {
-        if (sp.contains("img_rot")) {
-            mSbRotation.setProgress(this.sp.getInt("img_rot", 0));
+        if (sp.contains("heart_rot")) {
+            mSbRotation.setProgress(sp.getInt("heart_rot", 0));
         }
-        if (sp.getBoolean("hide_heart", false)) {
+        if (sp.getBoolean("heart_hide", false)) {
             mSHide.setChecked(true);
         }
         else {

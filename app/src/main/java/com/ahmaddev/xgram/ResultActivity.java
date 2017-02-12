@@ -121,21 +121,34 @@ public class ResultActivity extends BaseActivity {
     }
 
     private void copyFileToDownloads(Uri croppedFileUri) throws Exception {
-        String downloadsDirectoryPath = Environment.getExternalStorageDirectory().getPath() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/cache" + "/image";
-        String filename = "img_cache" + ".png";
 
-        File saveFile = new File(downloadsDirectoryPath, filename);
+        String downloadsDirectoryPath = Environment.getExternalStorageDirectory().getPath() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/image";
+        String filename = "heart.png";
 
-        FileInputStream inStream = new FileInputStream(new File(croppedFileUri.getPath()));
-        FileOutputStream outStream = new FileOutputStream(saveFile);
-        FileChannel inChannel = inStream.getChannel();
-        FileChannel outChannel = outStream.getChannel();
-        inChannel.transferTo(0, inChannel.size(), outChannel);
-        inStream.close();
-        outStream.close();
-        finish();
 
-        HeartFragment.mImageView.setImageBitmap(BitmapFactory.decodeFile(new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/cache/image/" + "img_cache.png").getAbsolutePath()));
+        File folder = new File(downloadsDirectoryPath);
+        boolean success = true;
+        if (!folder.exists()) {
+            success = folder.mkdirs();
+        }
+        if (success) {
+            File saveFile = new File(downloadsDirectoryPath, filename);
+
+            FileInputStream inStream = new FileInputStream(new File(croppedFileUri.getPath()));
+            FileOutputStream outStream = new FileOutputStream(saveFile);
+            FileChannel inChannel = inStream.getChannel();
+            FileChannel outChannel = outStream.getChannel();
+            inChannel.transferTo(0, inChannel.size(), outChannel);
+            inStream.close();
+            outStream.close();
+            finish();
+
+            HeartFragment.mImageView.setImageBitmap(BitmapFactory.decodeFile(new File(Environment.getExternalStorageDirectory().getPath() + "/Android/data/" + BuildConfig.APPLICATION_ID + "/image/heart.png").getAbsolutePath()));
+
+        }
+
+
+
 
     }
 
